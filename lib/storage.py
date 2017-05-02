@@ -33,10 +33,12 @@ class System(object):
         self.SYSTEM_IDC = idc
         self.location = location
         self.name = name
-
-        self.system_chests = {}
         self.exist = True
 
+        self.system_chests = {}
+
+        def get_system_chests(self):
+            return self.system_chests
         def get_SYSTEM_IDC(self):
             return self.SYSTEM_IDC
         def get_location(self):
@@ -58,13 +60,14 @@ class Chest(object):
         self.system_idc = system_idc
         self.CHEST_IDC = chest_idc
         self.location = location
-
         self.color = color
-
         self.name = name
-
         self.exist = True
 
+        self.chest_systems = {}
+
+        def get_chest_systems(self):
+            return self.chest_systems
         def get_system_idc(self):
             return self.system_idc
         def get_CHEST_IDC(self):
@@ -82,6 +85,7 @@ class Chest(object):
             self.location = var
         def set_name(self, var):
             self.exist = var
+
 class Product(object):
     def __init__(self, produkt_idc, chest_idc, name, value = 'Unkown', weight = 'Unkown', mass = 'Unkown'):
         self.PRODUCT_IDC = produkt_idc
