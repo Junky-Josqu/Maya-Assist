@@ -1,5 +1,6 @@
 #/usr/local/bin/python
 'Maya-Assist Storage system'
+
 class Room(object):
     def __init__(self, idc, location, name):
         self.ROOM_IDC = idc
@@ -96,3 +97,26 @@ class Product(object):
             return self.PRODUCT_IDC
         def get_chest_idc(self):
             return self.chest_idc
+        def get_name(self):
+            return self.name
+        def get_value(self):
+            return self.value
+        def get_weight(self):
+            return self.weight
+        def get_mass(self):
+            return self.mass
+        def get_exist(self):
+            return self.exist
+
+        def set_chest_idc(self, var):
+            self.chest_idc = var
+        def set_name(self, var):
+            self.name = var
+        def set_value(self, var):
+            self.value = var
+        def set_weight(self, var):
+            self.weight = var
+        def get_mass(self, var):
+            self.mass = var
+        def get_exist(self, var):
+            self.exist = var
