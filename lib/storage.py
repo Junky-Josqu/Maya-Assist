@@ -10,8 +10,6 @@ class Room(object):
         self.exist = True
         self.room_systems = {}
 
-        def get_room_systems(self):
-            return self.room_systems
         def get_ROOM_IDC(self):
             return self.ROOM_IDC
         def get_location(self):
@@ -28,6 +26,9 @@ class Room(object):
         def set_exist(self, var):
             self.exist = var
 
+        def get_room_systems(self):
+            return self.room_systems
+
 class System(object):
     def __init__(self, idc, location, name):
         self.SYSTEM_IDC = idc
@@ -37,14 +38,14 @@ class System(object):
 
         self.system_chests = {}
 
-        def get_system_chests(self):
-            return self.system_chests
+
         def get_SYSTEM_IDC(self):
             return self.SYSTEM_IDC
         def get_location(self):
             return self.location
         def get_name(self):
             return self.name
+
         def get_system_chests(self):
             return self.system_chests
 
@@ -81,9 +82,13 @@ class Chest(object):
 
         def set_system_idc(self, var):
             self.system_idc = var
+        def set_color(self, var):
+            self.color = var
         def set_location(self, var):
             self.location = var
         def set_name(self, var):
+            self.name = var
+        def set_exist(self, var):
             self.exist = var
 
 class Product(object):
@@ -120,7 +125,7 @@ class Product(object):
             self.value = var
         def set_weight(self, var):
             self.weight = var
-        def get_mass(self, var):
+        def set_mass(self, var):
             self.mass = var
-        def get_exist(self, var):
+        def set_exist(self, var):
             self.exist = var
